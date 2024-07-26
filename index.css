@@ -29,7 +29,6 @@ body {
 }
 
 .content {
-  width: 90%;
   margin: 0;
   align-self: center;
   background-color: rgba(255, 255, 255, 0.6);
@@ -37,13 +36,15 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin: 10px auto;
-  max-width: 60%;
+  width: 60%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
-  grid-row: auto;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 30px;
 }
 
+.content:empty {
+  display: none;
+}
 .add-book {
   border-radius: 12px;
   padding: 10px;
@@ -52,19 +53,22 @@ body {
 }
 
 .card {
+  max-width: 250px;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   padding: 16px;
-  position: relative;
+  justify-self: center;
   background: white; /* Ensures the card has a white background */
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
+
 .card img {
   margin: 10px auto;
   height: 200px;
-  width: 90%;
+  width: 80%;
   border-radius: 8px;
 }
 .card h2 {

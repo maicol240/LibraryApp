@@ -1,6 +1,12 @@
 const library = [];
 const content = document.querySelector(".content");
 
+function resizeContent() {
+  if (library.length === 1) {
+    content.style.width = "fit-content";
+  } else content.style.width = "60%";
+}
+
 function Book(img, title, author, pages, read) {
   this.img = img;
   this.title = title;
@@ -63,6 +69,7 @@ function displayBooks() {
 
     btn.addEventListener("click", () => {
       library.splice(index, 1);
+
       displayBooks();
     });
 
@@ -76,6 +83,7 @@ function displayBooks() {
     card.appendChild(checkBoxContainer);
     content.appendChild(card);
   });
+  resizeContent();
 }
 
 // seed data
@@ -94,7 +102,16 @@ const book2 = new Book(
   180,
   false
 );
+const book3 = new Book(
+  "/img/The_Great_Gatsby_Cover_1925_Retouched.jpg",
+  "The Great Gatsby",
+  "F. Scott Fitzgerald",
+  180,
+  false
+);
 
 library.push(book1);
 library.push(book2);
+library.push(book3);
+
 displayBooks();
