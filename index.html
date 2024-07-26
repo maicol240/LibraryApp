@@ -7,10 +7,62 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div class="header">
-      <h1>LibraryApp</h1>
+    <div class="container">
+      <div class="header">
+        <h1>LibraryApp</h1>
+        <button class="add-book">Add</button>
+      </div>
+      <!-- Header ends Here -->
+      <div class="content">
+        <div class="card">
+          <img
+            src="/img/The_Great_Gatsby_Cover_1925_Retouched.jpg"
+            alt="Book Cover"
+          />
+          <h2>The Great Gatsby</h2>
+          <p><strong>Author:</strong> F. Scott Fitzgerald</p>
+          <p><strong>Pages:</strong> 180</p>
+          <div class="checkbox-container">
+            <div class="checkbox">
+              <input type="checkbox" id="read1" />
+              <label for="read1">Read</label>
+            </div>
+            <button class="delete-btn">Delete</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="img/bird.jpg" alt="Book Cover" />
+          <h2>To Kill a Mockingbird</h2>
+          <p><strong>Author:</strong> Harper Lee</p>
+          <p><strong>Pages:</strong> 281</p>
+          <div class="checkbox-container">
+            <div class="checkbox">
+              <input type="checkbox" id="read2" />
+              <label for="read2">Read</label>
+            </div>
+            <button class="delete-btn">Delete</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Book Cover" />
+          <h2>1984</h2>
+          <p><strong>Author:</strong> George Orwell</p>
+          <p><strong>Pages:</strong> 328</p>
+          <div class="checkbox-container">
+            <div class="checkbox">
+              <input type="checkbox" id="read3" />
+              <label for="read3">Read</label>
+            </div>
+            <button class="delete-btn">Delete</button>
+          </div>
+        </div>
+
+        <!-- Add more cards as needed -->
+      </div>
     </div>
-    <!-- Header ends Here -->
-    <div class="content">jasd</div>
+
+    <script src="index.js" defer></script>
   </body>
 </html>

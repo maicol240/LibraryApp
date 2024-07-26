@@ -4,6 +4,13 @@
   margin: 0;
 }
 
+.container {
+  display: grid;
+  grid-template-rows: min-content 4fr;
+  grid-template-columns: 1fr;
+  row-gap: 30px;
+}
+
 .header {
   background: #303841;
   display: flex;
@@ -13,9 +20,83 @@
   height: 50px;
   font-size: 1rem;
   padding: 10px;
+  justify-content: space-between;
 }
 
 body {
-  background-image: url("jonathan-gong-A32Uo8lf-JE-unsplash.jpg");
+  background-image: url("img/jonathan-gong-A32Uo8lf-JE-unsplash.jpg");
   background-size: cover;
+}
+
+.content {
+  width: 90%;
+  margin: 0;
+  align-self: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 10px auto;
+  max-width: 60%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  grid-row: auto;
+}
+
+.add-book {
+  border-radius: 12px;
+  padding: 10px;
+  font-family: "Roboto Slab", serif;
+  font-weight: bolder;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  position: relative;
+  background: white; /* Ensures the card has a white background */
+  display: flex;
+  flex-direction: column;
+}
+.card img {
+  margin: 10px auto;
+  height: 200px;
+  width: 90%;
+  border-radius: 8px;
+}
+.card h2 {
+  margin: 10px 0;
+  font-size: 24px;
+}
+.card p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+.card .checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between checkbox and delete button */
+  margin-top: auto; /* Pushes it to the bottom */
+}
+.card .checkbox {
+  display: flex;
+  align-items: center;
+}
+.card .checkbox label {
+  margin-left: 8px;
+  font-size: 16px;
+}
+.card .delete-btn {
+  background: #ff4d4d; /* Red background */
+  color: white;
+  border: none;
+  border-radius: 4px; /* Rounded corners */
+  padding: 6px 12px; /* Padding for the button */
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  margin-left: 16px; /* Space between checkbox and button */
 }
