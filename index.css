@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  background: #303841;
+  display: flex;
+  font-family: "Roboto Slab", serif;
+  color: white;
+  font-weight: bolder;
+  height: 50px;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+body {
+  background-image: url("jonathan-gong-A32Uo8lf-JE-unsplash.jpg");
+  background-size: cover;
+}
