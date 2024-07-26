@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image: url(/img/gabriel-ghnassia-VmS8VQ0n39Q-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+  background-color: #2e4053;
+  font-size: 1.3rem;
+  color: antiquewhite;
+  padding: 10px;
+}
+
+.container {
+  width: 800px;
+  margin: 40px auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 300px));
+}
+
+.container:empty {
+  display: none;
+}
