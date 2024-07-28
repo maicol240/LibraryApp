@@ -1,11 +1,9 @@
 const library = [];
 const content = document.querySelector(".content");
-
-function resizeContent() {
-  if (library.length === 1) {
-    content.style.width = "fit-content";
-  } else content.style.width = "60%";
-}
+const addBtn = document.querySelector(".add-book");
+const showForm = document.querySelector("dialog");
+const form = document.querySelector("form");
+const cancelBtn = document.querySelector("#cancelButton");
 
 function Book(img, title, author, pages, read) {
   this.img = img;
@@ -13,6 +11,17 @@ function Book(img, title, author, pages, read) {
   this.author = author;
   this.pages = pages;
   this.read = read;
+}
+
+function resizeContent() {
+  if (library.length === 1) {
+    content.style.width = "fit-content";
+  } else content.style.width = "60%";
+}
+
+function addBook(book) {
+  library.push(book);
+  displayBooks();
 }
 
 function displayBooks() {
@@ -85,6 +94,44 @@ function displayBooks() {
   });
   resizeContent();
 }
+
+addBtn.addEventListener("click", () => {
+  showForm.showModal();
+});
+
+form.addEventListener("submit", (Event) => {
+  Event.preventDefault();
+
+  const formData = new FormData(form);
+  let bookCover = formData.get("bookcover");
+  const title = formData.get("title");
+  const author = formData.get("author");
+  const pages = parseInt(formData.get("pages"), 10);
+  const read = formData.get("read");
+
+  const img = new Image();
+  // add new book if img load
+
+  img.onload = () => {
+    const newBook = new Book(bookCover, title, author, pages, read);
+    addBook(newBook);
+    showForm.close();
+  };
+
+  img.onerror = () => {
+    bookCover = "/img/Cover-Coming-Soon.png";
+
+    const newBook = new Book(bookCover, title, author, pages, read);
+    addBook(newBook);
+    showForm.close();
+  };
+
+  img.src = bookCover;
+});
+
+cancelBtn.addEventListener("click", () => {
+  showForm.close();
+});
 
 // seed data
 const book1 = new Book(

@@ -15,7 +15,28 @@
       <!-- Header ends Here -->
       <div class="content"></div>
     </div>
+    <!-- Container ends here -->
 
+    <dialog id="bookDialog">
+      <form id="bookForm" method="dialog">
+        <h2>Add a New Book</h2>
+        <label for="img">Book Image:</label>
+        <input type="url" id="img" name="bookcover" />
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required />
+        <label for="author">Author:</label>
+        <input type="text" id="author" name="author" required />
+
+        <label for="pages">Pages:</label>
+        <input type="number" id="pages" name="pages" required min="10" />
+        <label for="read">Read
+        <input type="checkbox" id="read" name="read"  />
+        <menu>
+          <button type="button" id="cancelButton">Cancel</button>
+          <button id="submitButton" type="submit">Add Book</button>
+        </menu>
+      </form>
+    </dialog>
     <script src="index.js" defer></script>
   </body>
 </html>
