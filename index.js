@@ -150,11 +150,11 @@ const book2 = new Book(
   false
 );
 const book3 = new Book(
-  "/img/The_Great_Gatsby_Cover_1925_Retouched.jpg",
-  "The Great Gatsby",
-  "F. Scott Fitzgerald",
+  "/img/FrontCover.png",
+  "c# Player's Guide",
+  "RB Whitaker",
   180,
-  false
+  true
 );
 
 library.push(book1);
