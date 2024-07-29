@@ -143,14 +143,14 @@ const book1 = new Book(
 );
 
 const book2 = new Book(
-  "/img/The_Great_Gatsby_Cover_1925_Retouched.jpg",
+  "img/The_Great_Gatsby_Cover_1925_Retouched.jpg",
   "The Great Gatsby",
   "F. Scott Fitzgerald",
   180,
   false
 );
 const book3 = new Book(
-  "/img/FrontCover.png",
+  "img/FrontCover.png",
   "c# Player's Guide",
   "RB Whitaker",
   180,
