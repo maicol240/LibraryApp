@@ -132,7 +132,7 @@ body {
   margin: 10px auto;
   width: 60%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
@@ -148,7 +148,7 @@ body {
 }
 
 .card {
-  max-width: 250px;
+  width: 80%;
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -163,7 +163,7 @@ body {
 .card img {
   margin: 10px auto;
   height: 200px;
-  width: 80%;
+  width: 60%;
   border-radius: 8px;
 }
 .card h2 {
