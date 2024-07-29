@@ -119,7 +119,7 @@ form.addEventListener("submit", (Event) => {
   };
 
   img.onerror = () => {
-    bookCover = "/img/Cover-Coming-Soon.png";
+    bookCover = "img/Cover-Coming-Soon.png";
 
     const newBook = new Book(bookCover, title, author, pages, read);
     addBook(newBook);
