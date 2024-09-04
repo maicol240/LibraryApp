@@ -133,7 +133,7 @@ body {
 
   width: clamp(300px, 45%, 950px);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 0.3fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 0.3fr));
   gap: 20px;
   justify-content: center;
 }
