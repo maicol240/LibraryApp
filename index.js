@@ -13,12 +13,6 @@ function Book(img, title, author, pages, read) {
   this.read = read;
 }
 
-function resizeContent() {
-  if (library.length === 1) {
-    content.style.width = "fit-content";
-  } else content.style.width = "60%";
-}
-
 function addBook(book) {
   library.push(book);
   displayBooks();
@@ -92,7 +86,6 @@ function displayBooks() {
     card.appendChild(checkBoxContainer);
     content.appendChild(card);
   });
-  resizeContent();
 }
 
 addBtn.addEventListener("click", () => {

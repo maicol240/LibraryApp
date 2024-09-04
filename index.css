@@ -123,17 +123,19 @@ body {
 }
 
 .content {
-  margin: 0;
+  margin: 0 auto;
   align-self: center;
   background-color: rgba(255, 255, 255, 0.6);
-  padding: 20px;
+  padding-top: 20px;
+  padding: 10px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  margin: 10px auto;
-  width: 60%;
+
+  width: clamp(300px, 45%, 950px);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 0.3fr));
+  gap: 20px;
+  justify-content: center;
 }
 
 .content:empty {
@@ -148,7 +150,7 @@ body {
 }
 
 .card {
-  width: 80%;
+  width: clamp(200px, 80%, 250px);
   border: 1px solid #ccc;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -168,11 +170,11 @@ body {
 }
 .card h2 {
   margin: 10px 0;
-  font-size: 24px;
+  font-size: 1.2rem;
 }
 .card p {
   margin: 5px 0;
-  font-size: 16px;
+  font-size: 1rem;
 }
 .card .checkbox-container {
   display: flex;
