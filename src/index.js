@@ -1,3 +1,5 @@
+import "./index.css";
+
 const library = [];
 const content = document.querySelector(".content");
 const addBtn = document.querySelector(".add-book");
@@ -128,7 +130,7 @@ cancelBtn.addEventListener("click", () => {
 
 // seed data
 const book1 = new Book(
-  "img/bird.jpg",
+  "./img/bird.jpg",
   "To Kill a Mockingbird",
   "Harper Lee",
   281,
