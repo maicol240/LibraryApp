@@ -23,7 +23,7 @@ function addBook(book) {
   library.push(book);
   displayBooks();
 }
-
+//display
 function displayBooks() {
   //
   content.innerHTML = "";
