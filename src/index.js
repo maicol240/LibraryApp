@@ -1,7 +1,8 @@
 import "./index.css";
 import mockingBird from "./img/bird.jpg";
 import theGreatGastby from "./img/The_Great_Gatsby_Cover_1925_Retouched.jpg";
-import Cshardimg from "./img/FrontCover.png";
+import cShardimg from "./img/FrontCover.png";
+import comingSoon from "./img/Cover-Coming-Soon.png";
 
 const library = [];
 const content = document.querySelector(".content");
@@ -117,7 +118,7 @@ form.addEventListener("submit", (Event) => {
   };
 
   img.onerror = () => {
-    bookCover = "img/Cover-Coming-Soon.png";
+    bookCover = comingSoon;
 
     const newBook = new Book(bookCover, title, author, pages, read);
     addBook(newBook);
@@ -148,7 +149,7 @@ const book2 = new Book(
   false
 );
 const book3 = new Book(
-  Cshardimg,
+  cShardimg,
   "c# Player's Guide",
   "RB Whitaker",
   180,
