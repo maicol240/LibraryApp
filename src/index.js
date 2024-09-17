@@ -1,4 +1,7 @@
 import "./index.css";
+import mockingBird from "./img/bird.jpg";
+import theGreatGastby from "./img/The_Great_Gatsby_Cover_1925_Retouched.jpg";
+import Cshardimg from "./img/FrontCover.png";
 
 const library = [];
 const content = document.querySelector(".content");
@@ -130,7 +133,7 @@ cancelBtn.addEventListener("click", () => {
 
 // seed data
 const book1 = new Book(
-  "./img/bird.jpg",
+  mockingBird,
   "To Kill a Mockingbird",
   "Harper Lee",
   281,
@@ -138,14 +141,14 @@ const book1 = new Book(
 );
 
 const book2 = new Book(
-  "img/The_Great_Gatsby_Cover_1925_Retouched.jpg",
+  theGreatGastby,
   "The Great Gatsby",
   "F. Scott Fitzgerald",
   180,
   false
 );
 const book3 = new Book(
-  "img/FrontCover.png",
+  Cshardimg,
   "c# Player's Guide",
   "RB Whitaker",
   180,
